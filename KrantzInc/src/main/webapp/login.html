@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-control" content="No-Cache">
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<link rel="stylesheet" href="CSS/form.css">
+</head>
+<body>
+	<div class="container">
+		<div class="login-box">
+			<div class="login">
+				<span id="formLabel"> <strong>Tuition Reimbursement Manager</strong></span>
+				<form action="login" method="post">
+					<input class="emailInput " id="emailLoginInput" type="email"
+						name="email" placeholder="email@krantzinc.net" required="required" />
+					<input id="passwordInput" name="password" type="password"
+						placeholder="password" required="required" />
+						<div id="error" style="color:red"></div> 
+					<button id="loginBtn" type="submit" class="btn btn-primary">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

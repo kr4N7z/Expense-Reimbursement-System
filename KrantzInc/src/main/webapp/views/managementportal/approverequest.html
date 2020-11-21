@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-control" content="No-Cache">
+<meta charset="ISO-8859-1">
+<title>Request Approval Form</title>
+<link rel="stylesheet" href="/KrantzInc/CSS/form.css">
+<link rel="stylesheet" href="/KrantzInc/CSS/navbar.css">
+<script src="/KrantzInc/CSS/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+<script src="/KrantzInc/CSS/bootstrap-4.5.3-dist/js/popper.min.js"></script>
+<script src="/KrantzInc/js/reimbursementform.js"></script>
+<script src="/KrantzInc/js/jQuery.js"></script>
+<script src="/KrantzInc/js/form.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="login-box">
+			<div class="login">
+				<span id="formLabel"><strong>Tuition Reimbursement
+						Form</strong></span>
+				<form action="KrantzInc/returnObject/addReimbursementRequest"
+					method="post">
+					<div class="form-group">
+						<label for="validationDefault01">Reimbursement Name</label> <input
+							type="text" class="form-control" placeholder="MyReimbursement"
+							required>
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlSelect1">Reimbursement Type</label>
+						<select class="custom-select" id="exampleFormControlSelect1"
+							required>
+							<option value="">Select Type</option>
+							<option value="University Course">University Course</option>
+							<option value="Seminar">Seminar</option>
+							<option value="Certification Preparation Class">Certification
+								Preparation Class</option>
+							<option value="Certification">Certification</option>
+							<option value="Technical Training">Technical Training</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlSelect1">Event Cost</label> <input
+							type="number" class="form-control" min="0" step="1" required>
+					</div>
+
+					<div class="form-group">
+						<label for="exampleFormControlSelect1"></label>
+						<button class="btn btn-primary" type="submit">Submit form</button>
+						<div align="right">
+							<button id="cancelButton" class="btn btn-primary">Cancel</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

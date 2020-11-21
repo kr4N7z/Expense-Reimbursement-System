@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-control" content="No-Cache">
+<meta charset="ISO-8859-1">
+<title>Request Form</title>
+<link rel="stylesheet" href="/KrantzInc/CSS/form.css">
+<link rel="stylesheet" href="/KrantzInc/CSS/navbar.css">
+<script src="/KrantzInc/js/jQuery.js"></script>
+<script src="/KrantzInc/CSS/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+<script src="/KrantzInc/CSS/bootstrap-4.5.3-dist/js/popper.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="login-box">
+			<div class="login">
+				<span id="formLabel"><strong>Tuition Reimbursement
+						Form</strong></span>
+				<form
+					action="http://localhost:8080/KrantzInc/actionObject/addReimbursementRequest"
+					method="post" enctype="multipart/form-data">
+					<div class="form-group">
+						<label for="validationDefault01">Reimbursement Name</label> <input
+							name="name" type="text" class="form-control"
+							placeholder="MyReimbursement" required>
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlSelect1">Reimbursement Type</label>
+						<select name="type" class="custom-select" id="typeSelect" required>
+							<option value="">Select Type</option>
+							<option value="University Course">University Course</option>
+							<option value="Seminar">Seminar</option>
+							<option value="Certification Preparation Class">Certification
+								Preparation Class</option>
+							<option value="Certification">Certification</option>
+							<option value="Technical Training">Technical Training</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="validationDefault01">Event Cost</label> <input
+							id="cost" name="cost" type="number" class="form-control" min="0"
+							step="1" required>
+					</div>
+					<div class="form-group">
+						<label for="validationDefault01">Amount Reimbursed</label> <input
+							id="reimbursed" name="reimbursed" type="number"
+							class="form-control" min="0" required readonly> <input
+							type="hidden" id="reimbursedPct" name="reimbursedPct" value="">
+					</div>
+					<div class="form-group">
+						<label for="validationDefault01">Receipt Image</label>
+						<div class="custom-file">
+							<input type="file" class="custom-file-input" id="inputGroupFile01" name="inputGroupFile01"
+								aria-describedby="inputGroupFileAddon01" accept='image/*'> <label class="custom-file-label"
+								for="inputGroupFile01">Choose file</label>
+						</div>
+					</div>
+					<div id="error" style="color: red"></div>
+					<div class="form-row">
+						<div class="col-xs-6 text-left">
+							<button class="btn btn-primary" type="submit">Submit
+								form</button>
+						</div>
+						<div class="col-xs-6 text-right">
+							<button class=" btn btn-primary" type="button"
+								onclick="returnPage()">Cancel</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="/KrantzInc/js/reimbursementform.js"></script>
+<script src="/KrantzInc/js/form.js"></script>
+</html>

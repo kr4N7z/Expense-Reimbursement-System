@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-control" content="No-Cache">
+<meta charset="ISO-8859-1">
+<title>User Page</title>
+<link rel="stylesheet" href="/KrantzInc/CSS/form.css">
+<link rel="stylesheet" href="/KrantzInc/CSS/navbar.css">
+<script src="/KrantzInc/js/jQuery.js"></script>
+<script src="/KrantzInc/CSS/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+<script src="/KrantzInc/CSS/bootstrap-4.5.3-dist/js/popper.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="login-box">
+			<div class="login">
+				<span id="formLabel"> <strong>User Profile</strong></span>
+				<form
+					action="http://localhost:8080/KrantzInc/actionObject/userUpdate"
+					method="post">
+					<div class="form-row">
+					<label>Email address</label>
+						<input class="form-control" id="email" type="email" name="email"
+							placeholder="email@krantzinc.net" required="required" />
+							
+					</div>
+					<div id="error" style="color: red"></div>
+					<br>
+					<div class="form-row">
+					<label>Password</label>
+						<input  class="form-control" id="password" name="password" type="password"
+							placeholder="password" required="required" />
+					</div>
+					
+					<br>
+					<div class="form-row">
+						<div class="col-md-4 mb-3">
+							<label for="validationCustom01">First name</label> <input
+								type="text" class="form-control" id="firstName" name="firstName"
+								placeholder="First name" required>
+							<div class="valid-feedback">Looks good!</div>
+						</div>
+						<div class="col-md-4 mb-3">
+							<label for="validationCustom02">Last name</label> <input
+								type="text" class="form-control" id="lastName" name="lastName"
+								placeholder="Last name" required>
+							<div class="valid-feedback">Looks good!</div>
+						</div>
+					</div>
+					<br>
+					<div class="form-row">
+						<div class="col-xs-6 text-left">
+							<button class="btn btn-primary" type="submit" id="submitBtn">Submit
+								form</button>
+						</div>
+						<div class="col-xs-6 text-right">
+							<button class=" btn btn-primary" type="button" id="editBtn"
+								onclick="editForm()">Edit</button>
+						</div>
+						<div class="col-xs-6 text-right">
+							<button class=" btn btn-primary" type="button"
+								onclick="returnPage()">Cancel</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="/KrantzInc/js/userupdate.js"></script>
+<script src="/KrantzInc/js/form.js"></script>
+</html>
